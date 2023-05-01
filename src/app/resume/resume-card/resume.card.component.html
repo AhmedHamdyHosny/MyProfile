@@ -1,0 +1,38 @@
+<div class="resume-item">
+  <!-- <div class="resume-mark-light"></div> -->
+  <div class="resume-mark"></div>
+  <div class="resume-item-content">
+    <div class="resume-card-header">
+      <div>
+        <h5>
+          <span> {{ resumeItem.place }} </span>
+        </h5>
+        <div class="el-suptitle mb-15">
+          <span> {{ resumeItem.position }} </span>
+        </div>
+      </div>
+      <div class="date-container">
+        <span class="date">
+          <span
+            >{{ resumeItem.fromDate | date : "MMM YYYY" }} -
+            {{ resumeItem.toDate | date : "MMM YYYY" }}
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="resume-item-description">
+      <div>
+        <p>
+          {{ resumeItem.description }}
+        </p>
+      </div>
+    </div>
+    <a
+      *ngIf="resumeItem.link"
+      (click)="onCardLinkClick()"
+      class="card-link card-color-link card-w-chevron"
+    >
+      <span> {{ resumeItem.link }} </span>
+    </a>
+  </div>
+</div>

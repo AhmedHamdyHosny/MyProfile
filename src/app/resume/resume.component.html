@@ -1,0 +1,151 @@
+<div>
+  <section class="container-fluid">
+    <div class="address-table p-15-15">
+      <ul class="col-12 col-md-4 col-lg-3">
+        <li class="d-flex justify-content-between">
+          <h6>Residence:</h6>
+          <span>Canada</span>
+        </li>
+        <li class="d-flex justify-content-between">
+          <h6>City:</h6>
+          <span>Toronto</span>
+        </li>
+        <li class="d-flex justify-content-between">
+          <h6>Age:</h6>
+          <span>26</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="lang-skills d-flex justify-content-between p-30-15">
+      <div class="lang-skills-item">
+        <circle-progress
+          [percent]="100"
+          [radius]="32"
+          [outerStrokeWidth]="10"
+          [showInnerStroke]="false"
+          [showSubtitle]="false"
+          [outerStrokeColor]="'#ffc107'"
+          [backgroundPadding]="0"
+          [backgroundStrokeWidth]="15"
+          [backgroundStroke]="'#191923'"
+          [animation]="true"
+          [animationDuration]="300"
+        ></circle-progress>
+        <h6>French</h6>
+      </div>
+      <div class="lang-skills-item">
+        <circle-progress
+          [percent]="90"
+          [radius]="32"
+          [outerStrokeWidth]="10"
+          [showInnerStroke]="false"
+          [showSubtitle]="false"
+          [outerStrokeColor]="'#ffc107'"
+          [backgroundPadding]="0"
+          [backgroundStrokeWidth]="15"
+          [backgroundStroke]="'#191923'"
+          [animation]="true"
+          [animationDuration]="300"
+        ></circle-progress>
+        <h6>English</h6>
+      </div>
+      <div class="lang-skills-item">
+        <circle-progress
+          [percent]="70"
+          [radius]="32"
+          [outerStrokeWidth]="10"
+          [showInnerStroke]="false"
+          [showSubtitle]="false"
+          [outerStrokeColor]="'#ffc107'"
+          [backgroundPadding]="0"
+          [backgroundStrokeWidth]="15"
+          [backgroundStroke]="'#191923'"
+          [animation]="true"
+          [animationDuration]="300"
+        ></circle-progress>
+        <h6>Spanish</h6>
+      </div>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="row hard-skills p-30-15">
+      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
+        <h6>html</h6>
+        <div class="line-progress position-relative">
+          <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+          <div class="progressbar-text">90 %</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
+        <h6>CSS</h6>
+        <div class="line-progress position-relative">
+          <mat-progress-bar mode="determinate" value="95"></mat-progress-bar>
+          <div class="progressbar-text">95 %</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
+        <h6>Js</h6>
+        <div class="line-progress position-relative">
+          <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+          <div class="progressbar-text">75 %</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
+        <h6>PHP</h6>
+        <div class="line-progress position-relative">
+          <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+          <div class="progressbar-text">65 %</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
+        <h6>WordPress</h6>
+        <div class="line-progress position-relative">
+          <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+          <div class="progressbar-text">85 %</div>
+        </div>
+      </div>
+    </div>
+    <div class="ls-divider"></div>
+    <ul class="knowledge-list p-15-0">
+      <li><i class="fa-solid fa-check"></i>Bootstrap, Materialize</li>
+      <li><i class="fa-solid fa-check"></i>Stylus, Sass, Less</li>
+      <li><i class="fa-solid fa-check"></i>Gulp, Webpack, Grunt</li>
+      <li><i class="fa-solid fa-check"></i>GIT knowledge</li>
+    </ul>
+    <div class="ls-divider"></div>
+  </section>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="container">
+          <div class="section-title text-center text-lg-start">
+            <h4 class="title"><span> Education </span></h4>
+          </div>
+          <div *ngFor="let education of educationList">
+            <app-resume-card [resumeItem]="education"></app-resume-card>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div >
+          <div
+          >
+            <div class="container">
+              <div class="section-title text-center text-lg-start">
+                <h4 class="title"><span> Work History </span></h4>
+              </div>
+              <div *ngFor="let workHistory of workHistoryList">
+                <app-resume-card [resumeItem]="workHistory"></app-resume-card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

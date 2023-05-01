@@ -1,0 +1,129 @@
+<div [ngClass]="{'active': infoBarActive}" class="info-bar">
+    <!-- menu bar frame -->
+    <div class="info-bar-frame">
+      <!-- info bar header -->
+      <div class="info-bar-header">
+        <!-- info bar button -->
+        <a *ngIf="!menuBarActive" class="info-bar-btn" (click)="onInfoBarActiveChange()">
+          <!-- icon -->
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+        <!-- info bar button end -->
+      </div>
+      <!-- info bar header end -->
+      <!-- info bar header -->
+      <div class="header">
+        <!-- avatar -->
+        <div class="avatar">
+          <a target="_blank"
+            href="https://arter.bslthemes.com/wp-content/uploads/2020/09/face-1.jpg"
+            class="avatar-curtain"
+          >
+            <img
+              src="https://arter.bslthemes.com/wp-content/uploads/2020/09/face-1.jpg"
+              alt="avatar"
+            />
+            <i class="fas fa-expand"></i>
+          </a>
+          <!-- available -->
+          <div class="lamp-light ">
+            <!-- add class 'not-available' if not available-->
+            <div
+              class="available-lamp"
+              title="I am available for freelance hire"
+            ></div>
+          </div>
+        </div>
+        <!-- avatar end -->
+        <!-- name -->
+        <h5 class="name mb-10">
+          <a >Artur Carter</a>
+        </h5>
+        <!-- post -->
+        <div class="sm-text">
+          Front-end Deweloper<br />
+          Ui/UX Designer
+        </div>
+        <div class="sm-text">
+          +20 1012233345<br />
+        </div>
+      </div>
+      <!-- info bar header end -->
+      <!-- sidebar social -->
+      <div class="ls-social">
+        <a href="https://linkedin.com/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://whatsapp.com/" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <!-- sidebar social end -->
+      <!-- scroll frame -->
+      <div
+        id="scrollbar2"
+        class="scroll-frame"
+        data-scrollbar="true"
+        tabindex="-1"
+        style="overflow: scroll; outline: none"
+      >
+        <div class="scroll-content">
+          <!-- links frame -->
+          <div class="links-frame p-15-15">
+            <!-- download cv button -->
+            <a
+              href="https://drive.google.com/"
+              class="card-link text-center"
+              target="_blank"
+            >
+              Download cv <i class="fas fa-download"></i>
+            </a>
+          </div>
+          <!-- links frame end -->
+        </div>
+        <div
+          class="scrollbar-track scrollbar-track-x"
+          style="display: none"
+        >
+          <div
+            class="scrollbar-thumb scrollbar-thumb-x"
+            style="width: 244px; transform: translate3d(0px, 0px, 0px)"
+          ></div>
+        </div>
+        <div
+          class="scrollbar-track scrollbar-track-y"
+          style="display: block"
+        >
+          <div
+            class="scrollbar-thumb scrollbar-thumb-y"
+            style="
+              height: 702.325px;
+              transform: translate3d(0px, 0px, 0px);
+            "
+          ></div>
+        </div>
+      </div>
+      <!-- scroll frame end -->
+    </div>
+    <!-- menu bar frame end -->
+  </div>
+
+
+
+
+
+
+
+

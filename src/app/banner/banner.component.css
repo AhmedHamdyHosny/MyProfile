@@ -1,0 +1,255 @@
+
+.banner-back {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    width: 90%;
+    height: 30px;
+    margin-left: 5%;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: rgba(30, 30, 40, 0.88);
+  }
+
+.banner {
+    -webkit-transition: 0.55s ease-in-out;
+    transition: 0.55s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    z-index: 99;
+    margin-bottom: 30px;
+  }
+  .banner .banner-overlay {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px;
+    width: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(15%, rgba(45, 45, 58, 0.9)),
+      color-stop(50%, rgba(45, 45, 58, 0.7)),
+      to(rgba(43, 43, 53, 0.7))
+    );
+    background-image: linear-gradient(
+      90deg,
+      rgba(45, 45, 58, 0.9) 15%,
+      rgba(45, 45, 58, 0.7) 50%,
+      rgba(43, 43, 53, 0.7) 100%
+    );
+  }
+
+  .banner .banner-overlay .banner-title {
+    width: 100%;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+  .banner .banner-overlay .banner-title h1 {
+    color: #fafafc;
+  }
+  .banner .banner-overlay .banner-photo {
+    width: 390px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+  }
+
+  @media (max-width: 1600px) {
+    .banner .banner-overlay .banner-title h1 {
+      color: #fafafc;
+      font-size: 42px;
+    }
+    .banner .banner-overlay .banner-photo {
+      width: 360px;
+    }
+  }
+
+  
+@media (max-width: 1400px) {
+    .banner-back {
+      display: none;
+    }
+    .banner .banner-overlay .banner-title h1 {
+      color: #fafafc;
+      font-size: 36px;
+    }
+    .banner .banner-overlay .banner-photo {
+      width: 320px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .banner .banner-overlay .banner-photo {
+      display: none;
+    }
+  }
+  
+  .buttons-frame a {
+    margin-right: 15px;
+  }
+
+  .code-txt {
+    font-family: "Courier Prime", monospace;
+    color: #fafafc;
+  }
+  .code-txt i {
+    font-style: normal;
+    color: #ffc107;
+  }
+
+  @media (max-width: 1032px) {
+    .banner .banner-overlay {
+      padding: 60px 30px;
+    }
+    .banner .banner-overlay .banner-title {
+      text-align: center;
+    }
+    .banner .banner-overlay .banner-title h1 {
+      color: #fafafc;
+      font-size: 46px;
+    }
+    
+    .banner .banner-overlay .banner-title .buttons-frame {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    .banner .banner-overlay .banner-title .buttons-frame a {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .banner
+      .banner-overlay
+      .banner-title
+      .buttons-frame
+      a:first-child {
+      margin-bottom: 15px;
+    }
+    .code-txt {
+      min-height: 70px;
+      margin-bottom: 0;
+    }
+  }
+
+  
+.counter-frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    position: relative;
+  }
+  .counter-frame .counter-box {
+    min-width: 60px;
+  }
+  .counter-frame .counter-box .counter {
+    color: #ffc107;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+  }
+  .counter-frame .counter-box .counter-plus {
+    margin-left: 3px;
+    color: #ffc107;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+  }
+
+  .buttons-frame a {
+    margin-right: 15px;
+  }
+
+  
+  .banner .banner-overlay .banner-title .buttons-frame {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .banner .banner-overlay .banner-title .buttons-frame a {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .banner
+    .banner-overlay
+    .banner-title
+    .buttons-frame
+    a:first-child {
+    margin-bottom: 15px;
+  }
+
+
+
+  
+.banner-btn {
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    color: #20202a;
+    background: #ffc107;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    border: none;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+  .banner-btn span {
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  .banner-btn.banner-btn-md {
+    height: 45px;
+    font-size: 12px;
+    padding: 0 35px;
+  }
+  .banner-btn.banner-btn-sm {
+    height: 40px;
+    font-size: 12px;
+    padding: 0 30px;
+  }
+  .banner-btn:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    color: #1e1e28;
+  }
+
+  .lg-text {
+    font-size: 16px;
+  }

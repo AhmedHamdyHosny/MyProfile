@@ -1,0 +1,36 @@
+<div class="testimonial">
+    <div class="testimonial-body">
+      <img
+        decoding="async"
+        class="testimonial-face ls-is-cached lazyloaded"
+        [src]="recommendation.image"
+        [alt]="recommendation.name"
+      />
+      <h5>
+        <span>{{recommendation.name}} </span>
+      </h5>
+      <div class="suptitle mb-15">
+        <span> {{recommendation.position}} </span>
+      </div>
+      <div class="mb-15 description">
+        <div>
+          <p>
+          {{recommendation.review}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-footer">
+      <div>
+        <ul class="star-rate">
+          <li *ngFor="let _ of [].constructor(recommendation.rating);">
+            <i class="fas fa-star"></i>
+          </li>
+          <li class="empty-item" *ngFor="let _ of [].constructor(5 - recommendation.rating);">
+            <i class="fas fa-star"></i>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>

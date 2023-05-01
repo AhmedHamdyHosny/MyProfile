@@ -1,0 +1,18 @@
+<div class="gallery-item">
+  <a  class="gallery-item-frame">
+    <img
+      class="ls-is-cached lazyloaded"
+      decoding="async"
+      [src]="galleryItem.image"
+      [alt]="galleryItem.title"
+    />
+    <span class="gallery-item-hover"><i class="fas fa-expand"></i></span>
+  </a>
+  <div class="gallery-item-description">
+    <h5 class="mb-15">{{ galleryItem.title }}</h5>
+    <div class="mb-15">
+      {{ galleryItem.description }}
+    </div>
+    <!-- <a class="card-link card-color-link card-w-chevron">Read more</a> -->
+  </div>
+</div>
