@@ -1,0 +1,28 @@
+
+.counter-frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    position: relative;
+  }
+  .counter-frame .counter-box {
+    min-width: 60px;
+  }
+  .counter-frame .counter-box .counter {
+    color: #ffc107;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+  }
+  .counter-frame .counter-box .counter-plus {
+    margin-left: 3px;
+    color: #ffc107;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+  }

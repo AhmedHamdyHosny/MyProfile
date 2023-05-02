@@ -1,25 +1,42 @@
 <div>
   <section class="container-fluid">
-    <div class="address-table p-15-15">
-      <ul class="col-12 col-md-4 col-lg-3">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h4 class="title-frame">
+            <span> Resume </span>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="row info-table p-15-15">
+      <ul class="col-12 col-md-4 col-lg-3 px-2">
         <li class="d-flex justify-content-between">
           <h6>Residence:</h6>
-          <span>Canada</span>
+          <span>Egypt</span>
         </li>
         <li class="d-flex justify-content-between">
-          <h6>City:</h6>
-          <span>Toronto</span>
+          <h6>Governorate:</h6>
+          <span>Al Qalyubia</span>
         </li>
         <li class="d-flex justify-content-between">
-          <h6>Age:</h6>
-          <span>26</span>
+          <h6>Date of Birth:</h6>
+          <span>August 4, 1990</span>
+        </li>
+      </ul>
+
+      <div class="ls-vertical-divider"></div>
+
+      <ul class="col-12 col-md-4 col-lg-3 px-2">
+        <li class="d-flex justify-content-between">
+          <h6>Military Status:</h6>
+          <span>Complete</span>
         </li>
       </ul>
     </div>
-
     <div class="ls-divider"></div>
 
-    <div class="lang-skills d-flex justify-content-between p-30-15">
+    <div class="lang-skills d-flex justify-content-around p-30-15">
       <div class="lang-skills-item">
         <circle-progress
           [percent]="100"
@@ -34,7 +51,7 @@
           [animation]="true"
           [animationDuration]="300"
         ></circle-progress>
-        <h6>French</h6>
+        <h6>Arabic</h6>
       </div>
       <div class="lang-skills-item">
         <circle-progress
@@ -52,7 +69,7 @@
         ></circle-progress>
         <h6>English</h6>
       </div>
-      <div class="lang-skills-item">
+      <!-- <div class="lang-skills-item">
         <circle-progress
           [percent]="70"
           [radius]="32"
@@ -67,55 +84,181 @@
           [animationDuration]="300"
         ></circle-progress>
         <h6>Spanish</h6>
-      </div>
+      </div> -->
     </div>
-
+    <div class="ls-divider"></div>
+    
+    <div class="personal-skills">
+      <h4 class="mt-4">
+        <span> Personal Skills </span>
+      </h4>
+      <ul class="knowledge-list p-15-0">
+        <li>
+          <i class="fa-solid fa-check"></i>Full adaptation of the work within the
+          working group
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Ability to perform the Tasks under the
+          pressure of work
+        </li>
+        <li><i class="fa-solid fa-check"></i>Continuous self-development</li>
+        <li>
+          <i class="fa-solid fa-check"></i>Enjoy the ability to build good
+          constructive social relations
+        </li>
+        <li><i class="fa-solid fa-check"></i>Ability to learn in a short time</li>
+        <li><i class="fa-solid fa-check"></i>Leadership skills</li>
+        <li>
+          <i class="fa-solid fa-check"></i>Excellent problem solving skills and
+          love technical challenges
+        </li>
+        <li><i class="fa-solid fa-check"></i>High analytical skills</li>
+      </ul>
+    </div>
     <div class="ls-divider"></div>
 
     <div class="row hard-skills p-30-15">
       <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
-        <h6>html</h6>
+        <h6>C++</h6>
         <div class="line-progress position-relative">
           <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
           <div class="progressbar-text">90 %</div>
         </div>
       </div>
       <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
-        <h6>CSS</h6>
+        <h6>C# Web Applications (MVC)</h6>
         <div class="line-progress position-relative">
           <mat-progress-bar mode="determinate" value="95"></mat-progress-bar>
-          <div class="progressbar-text">95 %</div>
+          <div class="progressbar-text">100 %</div>
         </div>
       </div>
       <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
-        <h6>Js</h6>
+        <h6>J2EE</h6>
         <div class="line-progress position-relative">
           <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
-          <div class="progressbar-text">75 %</div>
+          <div class="progressbar-text">90 %</div>
         </div>
       </div>
       <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
-        <h6>PHP</h6>
+        <h6>Java for Android</h6>
         <div class="line-progress position-relative">
           <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
-          <div class="progressbar-text">65 %</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3 hard-skills-item">
-        <h6>WordPress</h6>
-        <div class="line-progress position-relative">
-          <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
           <div class="progressbar-text">85 %</div>
         </div>
       </div>
+
+      <div class="collapse hard-skills-collapse" id="hardSkillsCollapse">
+        <div class="row">
+          <div
+            *ngFor="let skill of moreHardSkills"
+            class="col-12 col-md-4 col-lg-3 hard-skills-item"
+          >
+            <h6>{{ skill.name }}</h6>
+            <div class="line-progress position-relative">
+              <mat-progress-bar
+                mode="determinate"
+                [value]="skill.percentage"
+              ></mat-progress-bar>
+              <div class="progressbar-text">{{ skill.percentage }} %</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        <a
+          class="btn btn-outline-secondary hard-skills-collapse-btn"
+          data-bs-toggle="collapse"
+          href="#hardSkillsCollapse"
+          role="button"
+          aria-expanded="false"
+          (click)="hardSkillsCollapsed = !hardSkillsCollapsed"
+          aria-controls="hardSkillsCollapse"
+        >
+          <span *ngIf="hardSkillsCollapsed" class="show">Show More</span>
+          <span *ngIf="!hardSkillsCollapsed" class="hide">Show Less</span>
+        </a>
+      </p>
     </div>
     <div class="ls-divider"></div>
-    <ul class="knowledge-list p-15-0">
-      <li><i class="fa-solid fa-check"></i>Bootstrap, Materialize</li>
-      <li><i class="fa-solid fa-check"></i>Stylus, Sass, Less</li>
-      <li><i class="fa-solid fa-check"></i>Gulp, Webpack, Grunt</li>
-      <li><i class="fa-solid fa-check"></i>GIT knowledge</li>
-    </ul>
+
+    <div class="theoretical-knowledge">
+      <h4 class="mt-4">
+        <span> Theoretical Knowledge </span>
+      </h4>
+      <ul class="knowledge-list p-15-0">
+        <li>
+          <i class="fa-solid fa-check"></i>Thorough Understanding of Knowledge
+          Management Methods & Techniques.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Thorough Understanding of Database
+          Designing Concepts.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Through Understanding of Data Mining
+          and Knowledge Refinement Techniques.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Thorough Understanding of the Object
+          Orientation Concepts.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Thorough Understanding of Software
+          Engineering & System Analysis and Design Concepts.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Good Knowledge in Distributed
+          Computing, Parallel Algorithms and Artificial Intelligence.
+        </li>
+      </ul>
+    </div>
+    
+    <div class="ls-divider"></div>
+
+    <div class="job-roles">
+      <h4 class="mt-4">
+        <span> Job Roles </span>
+      </h4>
+      <ul class="knowledge-list p-15-0">
+        <li>
+          <i class="fa-solid fa-check"></i>Validate business requirements from
+          application services.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Design activities in terms of
+          application service functionalities.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Design activities in terms of business
+          processes that are administered by application services.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Design database Structure for
+          application service.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Design database tables for the system.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Implement and testing activities of
+          applications service.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Deployment activities in terms of user
+          training, administration training and support team hand over for
+          application services.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Early life support for application
+          services.
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i>Provide training for data entries and
+          system admin.
+        </li>
+      </ul>
+    </div>
+
     <div class="ls-divider"></div>
   </section>
 
@@ -124,23 +267,30 @@
       <div class="col-12 col-md-6">
         <div class="container">
           <div class="section-title text-center text-lg-start">
-            <h4 class="title"><span> Education </span></h4>
+            <h4 class="title-frame title-top-margin">
+              <span> Education </span>
+            </h4>
           </div>
-          <div *ngFor="let education of educationList">
-            <app-resume-card [resumeItem]="education"></app-resume-card>
+          <div class="resume-timeline">
+            <div *ngFor="let education of educationList">
+              <app-resume-card [resumeItem]="education"></app-resume-card>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <div >
-          <div
-          >
+        <div>
+          <div>
             <div class="container">
               <div class="section-title text-center text-lg-start">
-                <h4 class="title"><span> Work History </span></h4>
+                <h4 class="title-frame title-top-margin">
+                  <span> Work History </span>
+                </h4>
               </div>
-              <div *ngFor="let workHistory of workHistoryList">
-                <app-resume-card [resumeItem]="workHistory"></app-resume-card>
+              <div class="resume-timeline">
+                <div *ngFor="let workHistory of workHistoryList">
+                  <app-resume-card [resumeItem]="workHistory"></app-resume-card>
+                </div>
               </div>
             </div>
           </div>

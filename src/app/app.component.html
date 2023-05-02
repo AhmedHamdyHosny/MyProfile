@@ -1,126 +1,128 @@
-  <div class="app">
-    <div class="mobile-top-bar"></div>
-    <div class="app-wrapper">
-      <div class="app-container">
-        <app-infobar
-          (infoBarActiveChange)="infoBarActive = $event"
-          [infoBarActive]="infoBarActive"
-          [menuBarActive]="menuBarActive"
-        ></app-infobar>
-        <div>
-          <div [ngClass]="{ 'active': menuBarActive }" class="menu-bar">
-            <div class="menu-bar-frame">
-              <div class="menu-bar-header">
-                <a
-                  *ngIf="!infoBarActive"
-                  (click)="menuBarActive = !menuBarActive"
-                  class="menu-bar-btn"
-                  [ngClass]="{ 'active': menuBarActive }"
-                >
-                  <span></span>
-                </a>
-              </div>
-              <div class="current-page">
-                <a *ngIf="router.url == '/home'">Home</a>
-                <a *ngIf="router.url == '/resume'">Resume</a>
-                <a *ngIf="router.url == '/contact'">Contact</a>
-                <a *ngIf="router.url == '/gallery'">Gallery</a>
-              </div>
+<div class="app">
+  <div class="mobile-top-bar"></div>
+  <div class="app-wrapper">
+    <div class="app-container">
+      <app-infobar
+        (infoBarActiveChange)="infoBarActive = $event"
+        [infoBarActive]="infoBarActive"
+        [menuBarActive]="menuBarActive"
+      ></app-infobar>
+      <div>
+        <div [ngClass]="{ active: menuBarActive }" class="menu-bar">
+          <div class="menu-bar-frame">
+            <div class="menu-bar-header">
+              <a
+                *ngIf="!infoBarActive"
+                (click)="menuBarActive = !menuBarActive"
+                class="menu-bar-btn"
+                [ngClass]="{ active: menuBarActive }"
+              >
+                <span></span>
+              </a>
+            </div>
+            <div class="current-page">
+              <a *ngIf="router.url == '/home'">Home</a>
+              <a *ngIf="router.url == '/resume'">Resume</a>
+              <a *ngIf="router.url == '/contact'">Contact</a>
+              <a *ngIf="router.url == '/gallery'">Gallery</a>
+              <a *ngIf="router.url == '/projects'">Projects</a>
+            </div>
 
-              <div class="scroll-frame">
-                <nav>
-                  <ul id="menu-main-menu" class="main-menu">
-                    <li
-                      [ngClass]="{ 'current-menu-item': router.url == '/home' }"
-                      class="menu-item"
-                    >
-                      <a (click)="routeTo('/home')">Home</a>
-                    </li>
-                    <li
-                      id="menu-item-199"
-                      class="menu-item"
-                      [ngClass]="{
-                        'current-menu-item': router.url == '/resume'
-                      }"
-                    >
-                      <a (click)="routeTo('/resume')">Resume</a>
-                    </li>
-                    <li
-                      id="menu-item-198"
-                      class="menu-item"
-                      [ngClass]="{
-                        'current-menu-item': router.url == '/gallery'
-                      }"
-                    >
-                      <a (click)="routeTo('/gallery')">Gallery</a>
-                    </li>
-                    <li
-                      id="menu-item-198"
-                      class="menu-item"
-                      [ngClass]="{
-                        'current-menu-item': router.url == '/contact'
-                      }"
-                    >
-                      <a (click)="routeTo('/contact')">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+            <div class="scroll-frame">
+              <nav>
+                <ul class="main-menu">
+                  <li
+                    [ngClass]="{ 'current-menu-item': router.url == '/home' }"
+                    class="menu-item"
+                  >
+                    <a (click)="routeTo('/home')">Home</a>
+                  </li>
+                  <li
+                    class="menu-item"
+                    [ngClass]="{
+                      'current-menu-item': router.url == '/resume'
+                    }"
+                  >
+                    <a (click)="routeTo('/resume')">Resume</a>
+                  </li>
+                  <li
+                    class="menu-item"
+                    [ngClass]="{
+                      'current-menu-item': router.url == '/projects'
+                    }"
+                  >
+                    <a (click)="routeTo('/projects')">Projects</a>
+                  </li>
+                  <li
+                    class="menu-item"
+                    [ngClass]="{
+                      'current-menu-item': router.url == '/gallery'
+                    }"
+                  >
+                    <a (click)="routeTo('/gallery')">Gallery</a>
+                  </li>
+                  <li
+                    class="menu-item"
+                    [ngClass]="{
+                      'current-menu-item': router.url == '/contact'
+                    }"
+                  >
+                    <a (click)="routeTo('/contact')">Contact</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="router-content">
-          <div class="curtain"></div>
-          <div
-            class="top-bg lazyloaded"
-            data-bg="https://arter.bslthemes.com/wp-content/uploads/2020/09/bg.jpg"
-            style="
-              background-image: url('https://arter.bslthemes.com/wp-content/uploads/2020/09/bg.jpg');
-            "
-          >
-            <!-- overlay -->
-            <div class="top-bg-overlay"></div>
-            <!-- overlay end -->
-          </div>
-          <div class="transition-fade" id="swup" data-swup="0">
+      <div class="router-content">
+        <div class="curtain"></div>
+        <div
+          class="top-bg "
+          data-bg="https://arter.bslthemes.com/wp-content/uploads/2020/09/bg.jpg"
+          style="
+            background-image: url('https://arter.bslthemes.com/wp-content/uploads/2020/09/bg.jpg');
+          "
+        >
+          <!-- overlay -->
+          <div class="top-bg-overlay"></div>
+          <!-- overlay end -->
+        </div>
+        <div class="transition-fade">
+          <div class="scroll-frame" style="overflow: scroll; outline: none">
             <div
-              class="scroll-frame"
-              style="overflow: scroll; outline: none"
+              (click)="onContentClick()"
+              class="scroll-content"
+              style="transform: translate3d(0px, 0px, 0px)"
+            >
+              <router-outlet></router-outlet>
+            </div>
+            <div
+              class="scrollbar-track scrollbar-track-x"
+              style="display: none"
             >
               <div
-                (click)="onContentClick()"
-                class="scroll-content"
-                style="transform: translate3d(0px, 0px, 0px)"
-              >
-                <router-outlet></router-outlet>
-              </div>
+                class="scrollbar-thumb scrollbar-thumb-x"
+                style="width: 1040px; transform: translate3d(0px, 0px, 0px)"
+              ></div>
+            </div>
+            <div
+              class="scrollbar-track scrollbar-track-y"
+              style="display: block"
+            >
               <div
-                class="scrollbar-track scrollbar-track-x"
-                style="display: none"
-              >
-                <div
-                  class="scrollbar-thumb scrollbar-thumb-x"
-                  style="width: 1040px; transform: translate3d(0px, 0px, 0px)"
-                ></div>
-              </div>
-              <div
-                class="scrollbar-track scrollbar-track-y"
-                style="display: block"
-              >
-                <div
-                  class="scrollbar-thumb scrollbar-thumb-y"
-                  style="
-                    height: 344.675px;
-                    transform: translate3d(0px, 0px, 0px);
-                    transform-origin: center top;
-                  "
-                ></div>
-              </div>
+                class="scrollbar-thumb scrollbar-thumb-y"
+                style="
+                  height: 344.675px;
+                  transform: translate3d(0px, 0px, 0px);
+                  transform-origin: center top;
+                "
+              ></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+</div>

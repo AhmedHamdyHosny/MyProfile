@@ -1,9 +1,24 @@
+
+.resume-timeline{
+  position: relative;
+
+}
+
+.resume-timeline:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  height: calc(100% - 10px);
+  width: 5px;
+  background: #191923;
+}
+
 .hard-skills .hard-skills-item {
   margin-bottom: 15px;
   position: relative;
 }
-.hard-skills .hard-skills-item h6
-{
+.hard-skills .hard-skills-item h6 {
   margin-bottom: 5px;
 }
 
@@ -36,7 +51,6 @@
   left: 45% !important;
 }
 
-
 .knowledge-list {
   padding-left: 0;
 }
@@ -63,30 +77,14 @@
   opacity: 0.3;
 }
 
-.address-table {
-  color: #cacace;
-}
-.address-table ul {
+.ls-vertical-divider {
+  background: #8c8c8e;
+  width: 1px;
+  height: auto;
+  margin-right: 5px;
+  margin-left: 5px;
   padding: 0;
-  margin: 0;
-}
-
-.address-table ul li:last-child {
-  margin-bottom: 0;
-}
-.address-table ul li strong {
-  font-size: 13px;
-  font-weight: 400;
-  color: #fafafc;
-  line-height: 1.7;
-}
-
-.address-table ul li h6 {
-  line-height: 1.7;
-}
-.address-table ul li span {
-  text-align: right;
-  line-height: 1.7;
+  opacity: 0.3;
 }
 
 .mat-mdc-progress-bar {

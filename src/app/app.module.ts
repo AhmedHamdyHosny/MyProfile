@@ -19,6 +19,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery.item.component';
 import { ImageGalleryDialogComponent } from './shared/image-gallery-dialog/image.gallery.dialog.component';
 import { LightboxModule } from 'ngx-lightbox';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectItemComponent } from './projects/project-item/project.item.component';
+import { ProjectDetailComponent } from './project-detail/project.detail.component';
+import { StatisticsComponent } from './home/statistics/statistics.component';
+import { RecommendationPopupComponent } from './resume/recommendation-popup/recommendation.popup.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +39,11 @@ import { LightboxModule } from 'ngx-lightbox';
     GalleryComponent,
     GalleryItemComponent,
     ImageGalleryDialogComponent,
+    ProjectsComponent,
+    ProjectItemComponent,
+    ProjectDetailComponent,
+    StatisticsComponent,
+    RecommendationPopupComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,27 @@
+<div class="d-flex justify-content-end">
+  <a (click)="closePopup()">
+    <i class="fas fa-times pb-2"></i>
+  </a>
+</div>
+
 <div class="testimonial">
   <div class="testimonial-body">
     <img
       decoding="async"
-      class="testimonial-face"
-      [src]="recommendation.image"
-      [alt]="recommendation.name"
+      class="testimonial-face  "
+      [src]="data.recommendation.image"
+      [alt]="data.recommendation.name"
     />
     <h5>
-      <span>{{ recommendation.name }} </span>
+      <span>{{ data.recommendation.name }} </span>
     </h5>
     <div class="suptitle mb-15">
-      <span> {{ recommendation.position }} </span>
+      <span> {{ data.recommendation.position }} </span>
     </div>
     <div class="mb-15 description">
       <div>
         <p>
-          {{ recommendation.review }}
+          {{ data.recommendation.review }}
         </p>
       </div>
     </div>
@@ -23,12 +29,12 @@
   <div class="testimonial-footer">
     <div>
       <ul class="star-rate">
-        <li *ngFor="let _ of [].constructor(recommendation.rating)">
+        <li *ngFor="let _ of [].constructor(data.recommendation.rating)">
           <i class="fas fa-star"></i>
         </li>
         <li
           class="empty-item"
-          *ngFor="let _ of [].constructor(5 - recommendation.rating)"
+          *ngFor="let _ of [].constructor(5 - data.recommendation.rating)"
         >
           <i class="fas fa-star"></i>
         </li>
