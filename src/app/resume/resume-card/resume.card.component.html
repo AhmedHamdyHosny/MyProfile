@@ -5,34 +5,37 @@
     <div class="resume-card-header">
       <div>
         <h5>
-          <span> {{ resumeItem.place }} </span>
+          <span> {{ resumeItem.title }} </span>
         </h5>
         <div class="el-suptitle mb-15">
           <span> {{ resumeItem.position }} </span>
         </div>
       </div>
-      <div class="date-container">
+      <div *ngIf="resumeItem.date" class="date-container">
         <span class="date">
           <span
+            >{{ resumeItem.date }} 
+          </span>
+          <!-- <span
             >{{ resumeItem.fromDate | date : "MMM YYYY" }} -
             {{ resumeItem.toDate | date : "MMM YYYY" }}
-          </span>
+          </span> -->
         </span>
       </div>
     </div>
     <div class="resume-item-description">
       <div>
-        <p>
+        <p style="white-space: pre-line">
           {{ resumeItem.description }}
         </p>
       </div>
     </div>
     <a
-      *ngIf="resumeItem.link"
+      *ngIf="resumeItem.linkText && resumeItem.linkText != ''"
       (click)="onCardLinkClick()"
       class="card-link card-color-link card-w-chevron"
     >
-      <span> {{ resumeItem.link }} </span>
+      <span> {{ resumeItem.linkText }} </span>
     </a>
   </div>
 </div>
