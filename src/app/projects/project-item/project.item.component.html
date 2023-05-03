@@ -10,10 +10,14 @@
     </a>
     <div class="gallery-item-description">
       <h5 class="mb-15">{{ project.title }}</h5>
+      <div *ngIf="project.language && project.language != ''" class="el-suptitle mb-15">
+        <span> {{ project.language }} </span>
+      </div>
+
       <div class="mb-15">
         {{ project.description }}
       </div>
-      <a class="card-link card-color-link card-w-chevron">Read more</a>
+      <a routerLink="/project/detail" class="card-link card-color-link card-w-chevron">Read more</a>
     </div>
   </div>
   
